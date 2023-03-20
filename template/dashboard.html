@@ -1,0 +1,243 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Crime,News and Law</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ 
+<!-- Material Kit CSS -->
+  <link href="{% static 'styles/dashboard.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="font/css/fontawesome5-overrides.min.css">
+  <link rel="stylesheet" href="font/css/fontawesome5-overrides.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/forms.css' %}">
+  <script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"> 
+  </script> 
+</head>
+
+<body>
+  <div class="wrapper ">
+    <div class="sidebar" data-color="azure" data-background-color="black">
+  
+      <div class="logo">
+        <h3 style="color:white;text-align:center;">सत्यमेव जयते</h3>
+      </div>
+      <div class="sidebar-wrapper" >
+        <ul class="nav">
+          <li class="nav-item active " >
+            <a class="nav-link" href="#emblem">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <br>
+          <li class="nav-item active">
+            <a class="nav-link" href="#news">
+              <i class="fa fa-newspaper-o "></i>
+              <p>News and Updates</p>
+            </a>
+          </li>
+          <br>
+          <li class="nav-item active " >
+            <a class="nav-link" href="#myChart">
+              <i class="fa fa-bars"></i>
+              <p>Menu</p>
+            </a>
+          </li>
+          <br>
+          <li class="nav-item  active" >
+            <a class="nav-link" href="#glowbox">
+              <i class="fa fa-balance-scale"></i>
+              <p>Law Corner</p>
+            </a>
+          </li>
+          <br>
+          <li class="nav-item active " >
+            <a class="nav-link" href="/register">
+              <i class="fa fa-sign-in"></i>
+              <p>Login</p>
+            </a>
+          </li>
+           
+          <!-- your sidebar here -->
+        </ul>
+       
+
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+        
+      <!-- End Navbar -->
+      <img src="{% static 'assets/emblem.png' %}" class="emblem" id="emblem"/>
+      <span style="padding-left:5% ;  font-size:50px; color:white;text-align:center;">  CIVIL RIGHTS PROTECTION SURVIELLANCE </span>
+      <br><div class="row"><marquee>
+       
+    <p class="blink blink-one">Emergency contact number: 100 *** Emergency contact number for women : 103 </p>
+ 
+
+      </marquee></div>
+      <div class="content">
+        <div class="container-fluid">
+          <!-- your content here -->
+         <div class="d-flex">{% static
+          
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner slide">
+              <div class="item active">
+                <img src="{% static 'assets/p1.jpg' %}">
+              </div>
+          
+              <div class="item">
+                <img src="{% static 'assets/p2.jpg' %}">
+              </div>
+
+              <div class="item">
+                <img src="{% static 'assets/p3.jpg' %}" >
+              </div>
+              <div class="item">
+                <img src="{% static 'assets/kisan.jpg' %}" >
+              </div>
+            </div>
+           
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="map">
+           <p class="name headpol">Police Stations Around You!</p> 
+           <div class="form-group"><form> <input type="text" name="username" class="form-control mapin" placeholder="Location"></form></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15079.304616741756!2d72.839731446916!3d19.11528103608872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spolice%20station!5e0!3m2!1sen!2sin!4v1582374074632!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>         
+         </div>
+         <br><br><br><br><br><br><br><br><br>
+
+         
+    
+
+
+                  
+                 
+            </div>
+
+</div>
+
+        </div>
+      </div>
+      
+     
+
+ 
+
+      </script>
+
+      </div>
+</div>
+     
+   
+
+    <div class="row" style="padding-top: 100px;">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon">
+              <a href="/complaint" style="color:white;"><i class="fa fa-file-text"></i></a>
+            </div>
+            <h3 class="card-title">Online Complaint Registration
+            </h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+               1,22,456
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header card-header-success card-header-icon">
+            <div class="card-icon">
+              <a href="#0" style="color:white;"><i class="material-icons">store</i></a>
+            </div>
+            <h3 class="card-title">Complaint Status</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              1,22,456
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header card-header-danger card-header-icon">
+            <div class="card-icon">
+              <a href="#0" style="color:white;"><i class="fa fa-file-text-o"></i></a>
+            </div>
+            <h3 class="card-title">FIR/CSR Status</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+             99,368
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header card-header-info card-header-icon">
+           
+            
+         
+          </div>
+        </div>
+      </div>
+    </div>
+    
+          
+            
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---last 3 boxes-->
+<div class="col-lg-12"></div>
+      
+
+    </div>
+    </div>
+    </div>
+   </div>
+  </div>
+</body>
+
+</html>
